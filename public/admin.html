@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CordCraft Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Render environment variable -->
+  <meta name="firebase-config" content="$FIREBASE_CONFIG">
+
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <h1>CordCraft Admin Dashboard</h1>
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/admin.html">Admin</a>
+    <a href="/terms.html">Terms</a>
+    <a href="/privacy.html">Privacy</a>
+  </nav>
+</header>
+
+<main class="content">
+  <section class="card">
+    <h2>Admin Overview</h2>
+    <p id="admin-status">Connecting to Firebase...</p>
+  </section>
+
+  <section class="card">
+    <h3>Users</h3>
+    <p>Listing documents from <code>users</code> collection.</p>
+    <div id="users-list">Loading users...</div>
+  </section>
+
+  <section class="card">
+    <h3>Logs</h3>
+    <p>Listing documents from <code>logs</code> collection.</p>
+    <div id="logs-list">Loading logs...</div>
+  </section>
+</main>
+
+<script src="/admin.js"></script>
+</body>
+</html>
