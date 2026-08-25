@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CordCraft Staff Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="firebase-config" content="$FIREBASE_CONFIG">
+  <link rel="stylesheet" href="/style.css">
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <h1>CordCraft Staff Login</h1>
+</header>
+
+<main class="content">
+
+  <section class="card">
+    <h2>Login</h2>
+
+    <label>Email</label>
+    <input id="email" type="email" placeholder="staff@example.com">
+
+    <label>Password</label>
+    <input id="password" type="password" placeholder="••••••••">
+
+    <button id="login-btn">Login</button>
+
+    <p id="login-status"></p>
+  </section>
+
+</main>
+
+<script src="/login.js"></script>
+</body>
+</html>
