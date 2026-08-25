@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CordCraft Case System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="firebase-config" content="$FIREBASE_CONFIG">
+  <link rel="stylesheet" href="/style.css">
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <h1>CordCraft Case System</h1>
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/admin.html">Admin</a>
+    <a href="/cases.html">Cases</a>
+  </nav>
+</header>
+
+<main class="content">
+
+  <!-- Create Case -->
+  <section class="card">
+    <h2>Create New Case</h2>
+
+    <label>Case Title</label>
+    <input id="case-title" type="text" placeholder="Example: Abuse Report">
+
+    <label>User ID</label>
+    <input id="case-user" type="text" placeholder="User ID or Username">
+
+    <label>Description</label>
+    <textarea id="case-desc" placeholder="Describe the issue..."></textarea>
+
+    <button id="create-case-btn">Create Case</button>
+
+    <p id="case-create-status"></p>
+  </section>
+
+  <!-- Case List -->
+  <section class="card">
+    <h2>All Cases</h2>
+    <div id="case-list">Loading cases...</div>
+  </section>
+
+</main>
+
+<script src="/cases.js"></script>
+</body>
+</html>
